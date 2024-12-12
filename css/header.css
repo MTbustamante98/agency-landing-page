@@ -1,0 +1,154 @@
+.header-bg {
+  background: url("../images/desktop/image-header.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+nav button {
+  background: var(--white);
+  border: none;
+  padding: 16px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+nav button a {
+  color: initial !important;
+  font: 700 1.125rem Fraunces, serif !important;
+  text-transform: uppercase !important;
+}
+
+nav button:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.header {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2.375rem;
+  position: relative;
+}
+
+.header nav ul {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.header nav ul a {
+  color: var(--white);
+  font: 500 1rem Barlow, sans-serif;
+}
+
+.title {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: max-content;
+}
+
+.title h1 {
+  color: var(--white);
+  font: 900 4rem Fraunces, serif;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
+}
+
+.title h1::after {
+  content: "";
+  background: url("../images/icon-arrow-down.svg");
+  display: block;
+  width: 36px;
+  height: 116px;
+  position: absolute;
+  top: 200px;
+  left: 47%;
+}
+
+[data-menu="button"] {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .header nav {
+    display: none;
+    width: 90%;
+    height: 65vh;
+    position: absolute;
+    background: var(--white);
+    top: 14%;
+    left: 5%;
+    z-index: 1;
+    padding-bottom: 5rem;
+  }
+
+  .header nav.active {
+    display: block;
+    animation: showDown .5s ease forwards;
+  }
+
+  @keyframes showDown {
+    from {
+      opacity: 0;
+      transform: translate(0, -40px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  .decoration {
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    background-color: #3EBFFF;
+    transform: skew(-40deg, 0);
+    right: 16px;
+  }
+
+  .header nav ul {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .header nav ul a {
+    font: 600 1.4rem Barlow, sans-serif;
+    color: var(--grayish-blue);
+  }
+
+  .header ul {
+    position: absolute;
+    top: 25%;
+  }
+
+  nav button {
+    background: var(--Yellow);
+    padding: 20px 32px;
+  }
+
+  nav button:hover {
+    background: hsla(0, 0%, 0%, 0.1);
+  }
+
+  [data-menu="button"] {
+    display: block;
+    align-items: initial;
+    align-self: flex-start;
+    flex-grow: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .title h1 {
+    font-size: 3rem;
+    max-width: 15ch;
+    text-align: center;
+  }
+}
