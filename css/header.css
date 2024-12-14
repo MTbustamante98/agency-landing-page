@@ -4,7 +4,7 @@
   background-position: center center;
 }
 
-nav button {
+nav ul li:last-child a {
   background: var(--white);
   border: none;
   padding: 16px 24px;
@@ -12,13 +12,13 @@ nav button {
   cursor: pointer;
 }
 
-nav button a {
+nav ul li:last-child a {
   color: initial !important;
   font: 700 1.125rem Fraunces, serif !important;
   text-transform: uppercase !important;
 }
 
-nav button:hover {
+nav ul li:last-child a:hover {
   color: var(--white);
   background: rgba(255, 255, 255, 0.5);
 }
