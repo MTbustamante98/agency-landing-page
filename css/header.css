@@ -129,12 +129,16 @@ nav ul li:last-child a:hover {
     color: var(--grayish-blue);
   }
   
-  nav button {
+  nav ul li:last-child {
+    margin-top: 1.25rem;
+  }
+
+  nav ul li:last-child a {
     background: var(--Yellow);
     padding: 20px 32px;
   }
 
-  nav button:hover {
+  nav ul li:last-child a:hover {
     background: hsla(0, 0%, 0%, 0.1);
   }
 
