@@ -65,7 +65,7 @@ nav button:hover {
   width: 36px;
   height: 116px;
   position: absolute;
-  top: 200px;
+  top: 250%;
   left: 47%;
 }
 
@@ -73,17 +73,22 @@ nav button:hover {
   display: none;
 }
 
+@media (max-width: 1024px) {
+  .title h1::after {
+    top: 200%;
+  }
+}
+
 @media (max-width: 800px) {
   .header nav {
     display: none;
     width: 90%;
-    height: 65vh;
+    height: auto;
     position: absolute;
     background: var(--white);
     top: 14%;
     left: 5%;
     z-index: 1;
-    padding-bottom: 5rem;
   }
 
   .header nav.active {
@@ -115,18 +120,15 @@ nav button:hover {
     display: flex;
     flex-direction: column;
     position: relative;
+    padding: 60px 0;
+    margin-top: 40px;
   }
 
   .header nav ul a {
     font: 600 1.4rem Barlow, sans-serif;
     color: var(--grayish-blue);
   }
-
-  .header ul {
-    position: absolute;
-    top: 25%;
-  }
-
+  
   nav button {
     background: var(--Yellow);
     padding: 20px 32px;
@@ -138,7 +140,6 @@ nav button:hover {
 
   [data-menu="button"] {
     display: block;
-    align-items: initial;
     align-self: flex-start;
     flex-grow: 0;
     border: none;
@@ -150,5 +151,9 @@ nav button:hover {
     font-size: 3rem;
     max-width: 15ch;
     text-align: center;
+  }
+
+  .title h1::after {
+    top: 135%;
   }
 }
