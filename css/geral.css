@@ -49,6 +49,7 @@ img {
   text-align: center;
   background: #76BCAE;
   font-size: 1rem;
+  max-width: 1400px;
 }
 
 .attribution a {
