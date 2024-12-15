@@ -108,9 +108,6 @@
 .client-testimonials {
   background: hsl(210, 4%, 95%);
   padding-bottom: 8rem;
-  padding-left: 0;
-  padding-right: 0;
-  max-width: 1400px;
 }
 
 .client-testimonials h1 {
@@ -175,7 +172,6 @@
 
 .footer-bg {
   background: hsl(168, 34%, 60%);
-  max-width: 1400px;
 }
 
 .footer {
@@ -227,10 +223,6 @@
 
   .information-box h1 {
     font: 900 2.5rem Fraunces, serif;
-  }
-
-  .gallery-images {
-    padding: 0;
   }
 }
 
